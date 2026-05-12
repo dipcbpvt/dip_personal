@@ -170,8 +170,9 @@
 
     </aside>
   </main>
+  
   <script>!function(){var e,t=document.documentElement,a=document.getElementById("toggle"),d=document.getElementById("vid-dark"),c=document.getElementById("vid-light"),i=document.getElementById("meta-theme");function n(e){t.dataset.theme=e,i.content="dark"===e?"#0b1118":"#d4d0ca","dark"===e?(d.classList.add("active"),c.classList.remove("active"),d.play().catch(function(){}),c.pause()):("none"===c.preload&&(c.preload="auto",c.load()),c.classList.add("active"),d.classList.remove("active"),c.play().catch(function(){}),d.pause()),localStorage.setItem("theme",e)}n((e=localStorage.getItem("theme"))||(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark")),a.addEventListener("click",function(){n("dark"===t.dataset.theme?"light":"dark")})}();</script>
-    <script type="application/ld+json">
+  <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@graph":[
