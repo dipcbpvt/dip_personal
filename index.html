@@ -4,9 +4,13 @@
   <title>Dip Chakraborty — Software Engineer, AI Integration Specialist & IoT Researcher</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="all" />
-  <link rel="preload" as="image" href="https://cdn.dipchakraborty.com/dip_dp_dark.png" fetchpriority="high" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://jdlineqjduwv7rqq.public.blob.vercel-storage.com" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" /></noscript>
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" /></noscript>
+  <link rel="preload" as="image" href="https://jdlineqjduwv7rqq.public.blob.vercel-storage.com/mainsite/dp_dark.png" fetchpriority="high" />
   <link rel="canonical" href="https://dipchakraborty.com/" />
   <link rel="icon" type="image/png" href="https://jdlineqjduwv7rqq.public.blob.vercel-storage.com/mainsite/dc-icon.png" />
   <link rel="apple-touch-icon" href="https://jdlineqjduwv7rqq.public.blob.vercel-storage.com/mainsite/dc-icon.png" />
@@ -41,25 +45,29 @@
   <video
     class="bg-video active"
     id="vid-dark"
-    src="https://jdlineqjduwv7rqq.public.blob.vercel-storage.com/mainsite/background_dark.mp4"
-    autoplay muted loop playsinline
-    preload="auto"
-    aria-hidden="true"
-  ></video>
-  
-  <video
-    class="bg-video"
-    id="vid-light"
-    src="https://jdlineqjduwv7rqq.public.blob.vercel-storage.com/mainsite/background_light.mp4"
+    data-src="https://jdlineqjduwv7rqq.public.blob.vercel-storage.com/mainsite/background_dark.mp4"
     muted loop playsinline
     preload="none"
     aria-hidden="true"
   ></video>
+
+  <!-- Light theme background retained for the commented theme-switch system below.
+  <video
+    class="bg-video"
+    id="vid-light"
+    data-src="https://jdlineqjduwv7rqq.public.blob.vercel-storage.com/mainsite/background_light.mp4"
+    muted loop playsinline
+    preload="none"
+    aria-hidden="true"
+  ></video>
+  -->
   <div class="bg-overlay load-fade" aria-hidden="true"></div>
+  <!-- Theme switch button retained for future use; dark theme is currently the default and only active theme.
   <button class="theme-toggle load-fade" id="toggle" aria-label="Switch color theme">
     <i class="fa-solid fa-moon"  aria-hidden="true"></i>
     <i class="fa-solid fa-sun"   aria-hidden="true"></i>
   </button>
+  -->
   <main class="page" role="main">
     <header class="header anim">
       <h1 itemprop="name">Dip Chakraborty</h1>
@@ -172,7 +180,10 @@
     </aside>
   </main>
   
+  <script>!function(){var e=document.documentElement,d=document.getElementById("vid-dark"),m=document.getElementById("meta-theme");function l(){if(!d||d.src)return;d.src=d.dataset.src;d.load();d.play().catch(function(){})}e.dataset.theme="dark";m&&(m.content="#0b1118");("requestIdleCallback"in window?requestIdleCallback:function(e){setTimeout(e,1e3)})(l,{timeout:2500});window.addEventListener("load",function(){setTimeout(l,0)},{once:!0})}();</script>
+  <!-- Previous system-aware theme switcher retained for future reactivation.
   <script>!function(){var e,t=document.documentElement,a=document.getElementById("toggle"),d=document.getElementById("vid-dark"),c=document.getElementById("vid-light"),i=document.getElementById("meta-theme");function n(e){t.dataset.theme=e,i.content="dark"===e?"#0b1118":"#d4d0ca","dark"===e?(d.classList.add("active"),c.classList.remove("active"),d.play().catch(function(){}),c.pause()):("none"===c.preload&&(c.preload="auto",c.load()),c.classList.add("active"),d.classList.remove("active"),c.play().catch(function(){}),d.pause()),localStorage.setItem("theme",e)}n((e=localStorage.getItem("theme"))||(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark")),a.addEventListener("click",function(){n("dark"===t.dataset.theme?"light":"dark")})}();</script>
+  -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
